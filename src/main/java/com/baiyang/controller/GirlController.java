@@ -1,5 +1,8 @@
-package com.baiyang;
+package com.baiyang.controller;
 
+import com.baiyang.repository.GirlRepository;
+import com.baiyang.service.GirlService;
+import com.baiyang.domain.Girl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

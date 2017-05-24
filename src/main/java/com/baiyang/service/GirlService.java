@@ -1,5 +1,7 @@
-package com.baiyang;
+package com.baiyang.service;
 
+import com.baiyang.repository.GirlRepository;
+import com.baiyang.domain.Girl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

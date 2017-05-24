@@ -1,4 +1,4 @@
-package com.baiyang;
+package com.baiyang.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

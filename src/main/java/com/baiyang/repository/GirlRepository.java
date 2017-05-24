@@ -1,5 +1,6 @@
-package com.baiyang;
+package com.baiyang.repository;
 
+import com.baiyang.domain.Girl;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
