@@ -19,7 +19,7 @@ public class HttpAspect {
 
     private final static Logger logger = LoggerFactory.getLogger(HttpAspect.class);
 
-    @Pointcut("execution(public * com.baiyang.controller.GirlController.*(..))")
+    @Pointcut("execution(public * com.baiyang.controller.*.*(..))")
     public void log() {
     }
 

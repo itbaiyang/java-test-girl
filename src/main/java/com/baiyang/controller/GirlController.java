@@ -43,7 +43,7 @@ public class GirlController {
      * 添加一个女生
      * @return
      */
-    @PostMapping(value = "girls")
+    @PostMapping(value = "/girls")
     public Result<Girl> girlAdd(@Valid Girl girl, BindingResult bindingResult) {
         if(bindingResult.hasErrors()){
             return null;
@@ -56,7 +56,7 @@ public class GirlController {
         return ResultUtil.success(girlRepository.save(girl));
     }
 
-    @GetMapping(value = "girls/{id}")
+    @GetMapping(value = "/girls/{id}")
     public Girl girlFindOne(@PathVariable("id") Integer id){
         return girlRepository.findOne(id);
     }
