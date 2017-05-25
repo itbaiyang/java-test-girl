@@ -1,5 +1,7 @@
 package com.baiyang.service;
 
+import com.baiyang.enums.ResultEnum;
+import com.baiyang.exception.GirlException;
 import com.baiyang.repository.GirlRepository;
 import com.baiyang.domain.Girl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,18 +31,24 @@ public class GirlService {
         girlRepository.save(girlB);
     }
 
-    public Integer getAge(Integer id) {
+    public void getAge(Integer id) throws Exception{
         Girl girl = girlRepository.findOne(id);
         Integer age = girl.getAge();
-        if (age < 10){
+        if (age <= 10){
             //返回"你还在上小学吧"
-            return 1;
+            throw new GirlException(ResultEnum.PRIMARY_SCHOOL);
         }else if (age >10 && age <16) {
             //返回"你可能在上初中"
-            return 2;
-        }else{
-            return 0;
+            throw new GirlException(ResultEnum.MIDDLE_SCHOOL);
         }
     }
 
+    /**
+     * 通过id查询一个女孩的信息
+     * @param id
+     * @return
+     */
+    public Girl findOne(Integer id) {
+        return girlRepository.findOne(id);
+    }
 }

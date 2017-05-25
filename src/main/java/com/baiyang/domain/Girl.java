@@ -18,13 +18,10 @@ public class Girl {
     @GeneratedValue
     private Integer id;
 
-    @NotBlank(message = "这个字段必传")
+//    @NotBlank(message = "这个字段必传")
     private String cupSize;
 
-    @Min(value = 18, message = "未成年少女禁止入内")
-    //    @NotNull
-    //    @Max()
-    //    @Length()
+    @Min(value = 10, message = "十岁以下不得入内")
     private Integer age;
 
     @NotNull(message = "金额必传")
